@@ -27,23 +27,6 @@
 }
 html,body{height:100%;overflow:hidden}
 
-/* ══ DESKTOP PHONE FRAME ══════════════════════════════ */
-@media(min-width:600px){
-  html,body{height:auto;overflow:auto;background:radial-gradient(ellipse at 50% 30%,#10100f 0%,#050507 70%);display:flex;justify-content:center;align-items:flex-start;padding:48px 0 80px;min-height:100vh}
-  #app-frame{
-    width:393px;height:852px;border-radius:48px;
-    border:1.5px solid rgba(255,255,255,.08);
-    box-shadow:0 0 0 10px #161618,0 0 0 11.5px rgba(224,168,94,.12),0 80px 140px rgba(0,0,0,.9),0 0 80px rgba(224,168,94,.04);
-    overflow:hidden;position:relative;flex-shrink:0;
-    transform:translateZ(0); /* makes fixed children relative to this frame */
-  }
-  /* dynamic island */
-  #app-frame::before{
-    content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);
-    width:120px;height:34px;background:#000;border-radius:20px;z-index:9999;
-    box-shadow:0 0 0 1.5px rgba(255,255,255,.06);
-  }
-}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);display:flex;flex-direction:column}
 
 /* ── GATE ── */
@@ -298,7 +281,6 @@ textarea::placeholder{color:var(--muted)}
 </style>
 </head>
 <body>
-<div id="app-frame">
 
 
 <!-- PASSWORD GATE -->
@@ -995,6 +977,5 @@ document.getElementById('pwInp').addEventListener('keydown',e=>{
 });
 
 </script>
-</div>
 </body>
 </html>
